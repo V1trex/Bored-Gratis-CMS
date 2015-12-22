@@ -1,0 +1,150 @@
+body {
+	margin:0;
+	background-color:#e7e7e7;
+	font-size:12px;
+	color:#737373;
+	font-family:calibri;
+}
+
+.header{
+	background-color:green;
+	text-align:center;
+	line-height:90px;
+	font-size:36px;
+	height:90px;
+	width:100%;
+}
+
+a {
+	text-decoration:none;
+	color:#fff;
+}
+
+.leftSide{
+	float:left;
+	width:800px;
+	display:inline-block;
+}
+
+.rightSide{
+	float:left;
+	width:200px;
+	display:inline-block;
+}
+
+.clear {
+	clear:all;
+	clear:both;
+}
+
+.content {
+	margin:10px auto;
+	width:1000px;
+	min-height:700px;
+	height:auto;
+}
+
+.tableUp{
+	margin-top:3px;
+	background-color:#31b573;
+	height:35px;
+	width:740px;
+	line-height:35px;
+	padding:0px 0px 0px 10px;
+	color:#fff;
+	text-transform: capitalize;
+}
+.tableBody{
+	background-color:#ffffff;
+	height:auto;
+	width:740px;
+	padding:5px;
+}
+.tableFoot{
+	background-color:#ffffff;
+	height:3px;
+	width:750px;
+}
+
+.panelUp{
+	margin-top:3px;
+	background-color:#3fbcef;
+	height:35px;
+	width:190px;
+	line-height:35px;
+	padding:0px 0px 0px 10px;
+	color:#fff;
+	text-transform: capitalize;
+}
+.panelBody{
+	background-color:#fff;
+	height:auto;
+	width:190px;
+	padding:5px;
+}
+.panelFoot{
+	background-color:#fff;
+	height:3px;
+	width:200px;
+}
+
+.footer  {
+	position:relative;
+	bottom:0;
+	height:71px;
+	width:990px;
+	margin:0px auto;
+	background-color:#212121;
+	color:#fff;
+	padding:5px;
+	text-align:right;
+}
+.footer .textbox {
+	width:400px;
+	float:right;
+}
+.nav {
+	background-image:url(images/nav.png);
+	width:950px;
+	height:60px;
+	line-height:60px;
+	margin:0px auto;
+	font-size:14px;
+	padding-left:50px;
+}
+
+.nav_item {
+	display:inline-block;
+	width:100px;
+	padding-right:3px;
+	text-align:center;
+}
+
+.submit {
+	background-color:#31b573;
+	border:0;
+	height:35px;
+	line-height:35px;
+	color:#fff;
+	width:250px;
+}
+
+input {
+	background-color:#fff;
+	height:25px;
+	color:#fff;
+	width:245px;
+	border:1px solid gray;
+	padding-left:5px;
+	color:gray;
+}
+
+label {
+	padding:3px;
+	display:block;
+}
+
+.error {
+	font-weight:bold;
+	color:red;
+}
