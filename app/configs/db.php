@@ -2,5 +2,5 @@
 	
 	$host = "localhost";
 	$user = "root";
-	$psw = "";
+	$psw = "070810111213a";
 	$db = "web";

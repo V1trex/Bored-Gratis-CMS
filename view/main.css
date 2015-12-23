@@ -82,6 +82,9 @@ a {
 	width:190px;
 	padding:5px;
 }
+.panelBody a {
+	color:#000;
+}
 .panelFoot{
 	background-color:#fff;
 	height:3px;
@@ -126,14 +129,16 @@ a {
 	height:35px;
 	line-height:35px;
 	color:#fff;
-	width:250px;
+	max-width:250px;
+	width:100%;
 }
 
 input {
 	background-color:#fff;
 	height:25px;
 	color:#fff;
-	width:245px;
+	max-width:245px;
+	width:96%;
 	border:1px solid gray;
 	padding-left:5px;
 	color:gray;

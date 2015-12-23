@@ -8,6 +8,7 @@
 	Define("CONFIGS","app/configs/");
 	Define("TPL","view/pages/");
 	Define("TEMPLATE","view/");
+	Define("MODULES","app/models/");
 	
 	// include some stuff to start CMS
 	require_once CORE.'boot.class.php';

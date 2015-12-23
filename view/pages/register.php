@@ -1,7 +1,8 @@
 <?php 
 
-	nav('HOMEPAGE,ARTICLES,CONTACTS,REGISTER,LOGIN');
-	
+	require_once CORE.'mysql.php';
+	$nav = mysqli_fetch_array(mysqli_query($conn,"SELECT * FROM nav"));
+		nav($nav['links']);
 	contentStart();
 	startLeft();
 	if(isset($_SESSION['user'])) {
@@ -22,33 +23,18 @@
 	closeLeft();
 	
 	startRight();
-		openside("Test panel",'Nisi commodo bresaola, leberkas venison eiusmod bacon occaecat laboretail corned beef Capicola nisi flank sed.
-				 when an unknown printer took a galley of type
-				 scrambled it to make a type specimen book.
-				 scrambled it to make a type specimen book.
-				 scrambled it to make a type specimen book.
-				 but also the leap into electronic typesetting');
-	openside("Test panel",'Nisi commodo bresaola, leberkas venison eiusmod bacon occaecat laboretail corned beef Capicola nisi flank sed.
-				 when an unknown printer took a galley of type
-				 scrambled it to make a type specimen book.
-				 scrambled it to make a type specimen book.
-				 scrambled it to make a type specimen book.
-				 but also the leap into electronic typesetting');
-	openside("Test panel",'Nisi commodo bresaola, leberkas venison eiusmod bacon occaecat laboretail corned beef Capicola nisi flank sed.
-				 when an unknown printer took a galley of type
-				 scrambled it to make a type specimen book.
-				 scrambled it to make a type specimen book.
-				 scrambled it to make a type specimen book.
-				 but also the leap into electronic typesetting');
-	openside("Test panel",'Nisi commodo bresaola, leberkas venison eiusmod bacon occaecat laboretail corned beef Capicola nisi flank sed.
-				 when an unknown printer took a galley of type
-				 scrambled it to make a type specimen book.
-				 scrambled it to make a type specimen book.
-				 scrambled it to make a type specimen book.
-				 but also the leap into electronic typesetting');
+
+		$panel = mysqli_query($conn,"SELECT * FROM panels WHERE id > 0");
+			foreach($panel as $row) {
+				if($row['module']!= NULL) {
+					require_once MODULES.$row['module'].'.model.php';
+				} else{
+					openside($row['title'],$row['content']);
+				}
+			}
+
 
 	closeRight();
-	
 	contentClose();
 ?>
 
